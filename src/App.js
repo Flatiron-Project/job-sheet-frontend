@@ -1,14 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Home from './views/Home';
+import React from "react"
+import "./App.css"
+import Home from "./views/Home"
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Home />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
