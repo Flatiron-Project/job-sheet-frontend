@@ -5424,6 +5424,11 @@ follow-redirects@^1.0.0:
   dependencies:
     debug "^3.0.0"
 
+fontsource-antic-slab@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/fontsource-antic-slab/-/fontsource-antic-slab-2.1.3.tgz#98417fd2188f05b332fb4b7863d3200699445e8a"
+  integrity sha512-SxwSgWdpAL4G3BXJ04LJOWYGMSzhJ/eaGle/ZQLSON48btzQlgXTJbvufUz/l42mOF6t34yZg5QSyrpZ751t5w==
+
 for-in@^0.1.3:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.8.tgz#d8773908e31256109952b1fdb9b3fa867d2775e1"
