@@ -1,7 +1,6 @@
+/* eslint-disable */
 import React from 'react'
-import { makeStyles, StylesProvider } from '@material-ui/core/styles'
-import TextField from '@material-ui/core/TextField'
-import Button from '@material-ui/core/Button'
+import { makeStyles, TextField, Button } from '@material-ui/core'
 
 const Login = () => {
   const classes = loginStyles()
