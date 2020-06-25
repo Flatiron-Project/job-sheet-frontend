@@ -6,7 +6,7 @@ const Login = () => {
 
   return (
     <div className={classes.view}>
-      <h1 className={classes.title}>ORBIT</h1>
+      <p className={classes.title}>ORBIT</p>
     </div>
   );
 }
@@ -24,7 +24,7 @@ const loginStyles = makeStyles((theme) => ({
     right: '7.49%',
     top: '11.83%',
     bottom: '76.34%',
-    fontFamily: 'OROSKO Free',
+    fontFamily: 'Antic Slab',
     fontStyle: 'normal',
     fontWeight: 'normal',
     fontSize: '36px',
