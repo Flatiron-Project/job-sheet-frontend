@@ -1,6 +1,7 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, StylesProvider } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
 
 const Login = () => {
   const classes = loginStyles()
@@ -8,20 +9,25 @@ const Login = () => {
   return (
     <div className={classes.view}>
       <h1 className={classes.title}>ORBIT</h1>
-      <form>
+      <form className={classes.form}>
         <TextField
-          className='input'
+          className={classes.input}
           id='email-input'
           label='Email'
           variant='outlined'
         />
         <TextField
-          className='input'
+          className={classes.input}
           id='password-input'
           label='Password'
           variant='outlined'
         />
       </form>
+      <div className={classes.buttonGroup}>
+        <Button className={classes.button} variant="contained" color="primary">LOGIN</Button>
+        <Button className={classes.button} variant="contained" color="primary">SIGN UP</Button>
+        <Button className={classes.button} variant="contained" color="secondary">Log in with Google</Button>
+      </div>
     </div>
   )
 }
@@ -46,6 +52,24 @@ const loginStyles = makeStyles((theme) => ({
     letterSpacing: '0.15px',
     color: '#000000',
   },
+  form: {
+    width: '75%',
+    margin: 'auto',
+  },
+  input: {
+    marginBottom: '15px',
+    width: '100%',
+  },  
+  button: {
+    marginBottom: '15px',
+  },
+  buttonGroup: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '75%',
+    height: '35%',
+    margin: 'auto',
+  }
 }))
 
 export default Login
