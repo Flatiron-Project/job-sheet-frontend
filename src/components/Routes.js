@@ -6,6 +6,7 @@ const Routes = () => {
   return (
     <div className="App">
       <Switch>
+        // Add routes here
         <Route exact path='/' component={Home} />
       </Switch>
     </div>
