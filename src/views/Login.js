@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { useState } from 'react'
 import { makeStyles, TextField, Button } from '@material-ui/core'
-// import { theme } from '../styles/theme'
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -29,35 +28,44 @@ const Login = () => {
           variant='outlined'
           color='primary'
           InputProps={{
-            className: classes.input
+            className: classes.input,
           }}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <TextField
           value={password}
           className={classes.inputField}
-          type="password"
+          type='password'
           id='password-input'
           label='Password'
           variant='outlined'
           color='primary'
           InputProps={{
-            className: classes.input
+            className: classes.input,
           }}
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
       </form>
       <div className={classes.buttonGroup}>
-        <Button className={classes.button} variant='contained' color='primary' onClick={handleLogin}>
+        <Button
+          className={classes.button}
+          variant='contained'
+          color='primary'
+          onClick={handleLogin}
+        >
           LOGIN
-        </Button>
-        <Button className={classes.button} variant='contained' color='primary' onClick={handleSignup}>
-          SIGN UP
         </Button>
         <Button
           className={classes.button}
           variant='contained'
-          color='secondary'
+          color='primary'
+          onClick={handleSignup}
+        >
+          SIGN UP
+        </Button>
+        <Button
+          className={classes.googleButton}
+          variant='contained'
         >
           Log in with Google
         </Button>
@@ -72,19 +80,15 @@ const loginStyle = makeStyles({
     flexDirection: 'column',
     width: '375px',
     height: '812px',
-    background:
-      'linear-gradient(0.4deg, #6200EE 3.88%, #03DAC5 105.33%)',
+    background: 'linear-gradient(0.4deg, #6200EE 3.88%, #03DAC5 105.33%)',
   },
   title: {
     marginTop: '25%',
-    fontFamily: 'Antic Slab',
-    fontStyle: 'normal',
     fontWeight: 'normal',
-    fontSize: '36px',
+    fontSize: '48px',
     lineHeight: '24px',
-    /* or 67% */
-    letterSpacing: '0.15px',
-    color: '#000000',
+    letterSpacing: '15px',
+    color: '#7F39FB',
   },
   form: {
     width: '75%',
@@ -95,11 +99,16 @@ const loginStyle = makeStyles({
     width: '100%',
   },
   input: {
-    color: '#03DAC5'
+    color: '#03DAC5',
   },
   button: {
     marginBottom: '15px',
     fontWeight: 'bold',
+  },
+  googleButton: {
+    marginBottom: '15px',
+    fontWeight: 'bold',
+    backgroundcolor: 'white',
   },
   buttonGroup: {
     display: 'flex',
