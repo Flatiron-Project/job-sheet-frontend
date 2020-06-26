@@ -19,8 +19,8 @@ const useStyles = makeStyles({
     fontSize: 20,
   },
   img: {
-    width: 150,
-    height: 150,
+    width: 50,
+    height: 50,
   },
 })
 
@@ -28,7 +28,7 @@ const GigCard = (props) => {
   // TODO Turn into card w/ material UI
   const classes = useStyles()
 
-  const { id, name, imgSrc } = props
+  const { id, name, imgSrc, payment } = props
   const placeholder = `https://via.placeholder.com/100/0000FF/808080`
 
   console.log("gig card", props)
@@ -37,10 +37,8 @@ const GigCard = (props) => {
       {/* <CardContent> */}
       {/* <CardMedia src={placeholder} /> */}
       <h3>{name}</h3>
-      {/* <img src={placeholder} /> */}
       <img src={imgSrc} />
-      {/* <Typography className={classes.cardHeader}>Card # {props.id}</Typography> */}
-      {/* </CardContent> */}
+      <h4>{payment}</h4>
     </Card>
   )
 }
