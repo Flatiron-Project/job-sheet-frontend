@@ -60,7 +60,7 @@ const GigCardContainer = (props) => {
       <h2>Today's Gigs!</h2>
       <Grid container={true} align-items='left' align-content="center">
         {renderAllGigCards}
-        // this is repetitive we should use .map to go through the gigs here
+        {/* this is repetitive we should use .map to go through the gigs here */}
         <GigCard
           id={companyData[0].id}
           imgSrc={companyData[0].imgSrc}
