@@ -13,6 +13,10 @@ const Login = () => {
     console.log(`Password: ${password}`)
   }
 
+  const handleSignup = () => {
+    console.log(`Redirect to Sign Up Page`)
+  }
+
   return (
     <div className={classes.view}>
       <h1 className={classes.title}>ORBIT</h1>
@@ -46,7 +50,7 @@ const Login = () => {
         <Button className={classes.button} variant='contained' color='primary' onClick={handleLogin}>
           LOGIN
         </Button>
-        <Button className={classes.button} variant='contained' color='primary'>
+        <Button className={classes.button} variant='contained' color='primary' onClick={handleSignup}>
           SIGN UP
         </Button>
         <Button
