@@ -16,9 +16,6 @@ const Home = () => {
       {/* <h1 className={classes.header}>Welcome</h1> */}
       <TopBar />
       <GoalsContainer />
-      <GigCardContainer />
-      <BottomNavBar />
-
     </div>
   )
 }

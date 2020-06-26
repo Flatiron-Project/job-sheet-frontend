@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { makeStyles, StylesProvider } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import GigCardContainer from './GigCardContainer'
 
 const TopBar = () => {
 
@@ -18,6 +19,7 @@ const TopBar = () => {
       <br/>
       <br/>
     ORBIT</h1>
+    <GigCardContainer />
     </div>
   )
 }
