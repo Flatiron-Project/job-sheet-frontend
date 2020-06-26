@@ -8,6 +8,11 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const classes = loginStyle()
 
+  const handleLogin = () => {
+    console.log(`Email: ${email}`)
+    console.log(`Password: ${password}`)
+  }
+
   return (
     <div className={classes.view}>
       <h1 className={classes.title}>ORBIT</h1>
@@ -38,7 +43,7 @@ const Login = () => {
         />
       </form>
       <div className={classes.buttonGroup}>
-        <Button className={classes.button} variant='contained' color='primary'>
+        <Button className={classes.button} variant='contained' color='primary' onClick={handleLogin}>
           LOGIN
         </Button>
         <Button className={classes.button} variant='contained' color='primary'>
