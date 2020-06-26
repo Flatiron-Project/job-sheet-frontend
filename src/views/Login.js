@@ -1,9 +1,11 @@
 /* eslint-disable */
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles, TextField, Button } from '@material-ui/core'
 // import { theme } from '../styles/theme'
 
 const Login = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const classes = loginStyle()
 
   return (
@@ -11,6 +13,7 @@ const Login = () => {
       <h1 className={classes.title}>ORBIT</h1>
       <form className={classes.form}>
         <TextField
+          value={email}
           className={classes.inputField}
           id='email-input'
           label='Email'
@@ -19,8 +22,10 @@ const Login = () => {
           InputProps={{
             className: classes.input
           }}
+          onChange={e => setEmail(e.target.value)}
         />
         <TextField
+          value={password}
           className={classes.inputField}
           id='password-input'
           label='Password'
@@ -29,6 +34,7 @@ const Login = () => {
           InputProps={{
             className: classes.input
           }}
+          onChange={e => setPassword(e.target.value)}
         />
       </form>
       <div className={classes.buttonGroup}>
