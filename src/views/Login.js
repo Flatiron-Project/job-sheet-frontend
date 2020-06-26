@@ -36,6 +36,7 @@ const Login = () => {
         <TextField
           value={password}
           className={classes.inputField}
+          type="password"
           id='password-input'
           label='Password'
           variant='outlined'
