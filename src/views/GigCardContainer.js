@@ -12,6 +12,9 @@ const gigCardContainerStyle = makeStyles((theme) => ({
   container: {
     padding:  20
   },
+  card: {
+    margin: 'auto'
+  }
 }))
 
 const companyData = [
@@ -57,25 +60,30 @@ const GigCardContainer = (props) => {
       <h2>Today's Gigs!</h2>
       <Grid container={true} align-items='left' align-content="center">
         {renderAllGigCards}
+        {/* this is repetitive we should use .map to go through the gigs here */}
         <GigCard
           id={companyData[0].id}
           imgSrc={companyData[0].imgSrc}
           payment={companyData[0].payment}
+          className={classes.card}
         />
         <GigCard
           id={companyData[1].id}
           imgSrc={companyData[1].imgSrc}
           payment={companyData[1].payment}
+          className={classes.card}
         />
         <GigCard
           id={companyData[2].id}
           imgSrc={companyData[2].imgSrc}
           payment={companyData[2].payment}
+          className={classes.card}
         />
         <GigCard
           id={companyData[3].id}
           imgSrc={companyData[3].imgSrc}
           payment={companyData[3].payment}
+          className={classes.card}
         />
       </Grid>
     </div>

@@ -1,37 +1,56 @@
 /* eslint-disable */
 import React from 'react'
 import { makeStyles, TextField, Button } from '@material-ui/core'
+// import { theme } from '../styles/theme'
 
 const Login = () => {
-  const classes = loginStyles()
+  const classes = loginStyle()
 
   return (
     <div className={classes.view}>
       <h1 className={classes.title}>ORBIT</h1>
       <form className={classes.form}>
         <TextField
-          className={classes.input}
+          className={classes.inputField}
           id='email-input'
           label='Email'
           variant='outlined'
+          color='primary'
+          InputProps={{
+            className: classes.input
+          }}
         />
         <TextField
-          className={classes.input}
+          className={classes.inputField}
           id='password-input'
           label='Password'
           variant='outlined'
+          color='primary'
+          InputProps={{
+            className: classes.input
+          }}
         />
       </form>
       <div className={classes.buttonGroup}>
-        <Button className={classes.button} variant="contained" color="primary">LOGIN</Button>
-        <Button className={classes.button} variant="contained" color="primary">SIGN UP</Button>
-        <Button className={classes.button} variant="contained" color="secondary">Log in with Google</Button>
+        <Button className={classes.button} variant='contained' color='primary'>
+          LOGIN
+        </Button>
+        <Button className={classes.button} variant='contained' color='primary'>
+          SIGN UP
+        </Button>
+        <Button
+          className={classes.button}
+          variant='contained'
+          color='secondary'
+        >
+          Log in with Google
+        </Button>
       </div>
     </div>
   )
 }
 
-const loginStyles = makeStyles((theme) => ({
+const loginStyle = makeStyles({
   view: {
     display: 'flex',
     flexDirection: 'column',
@@ -55,10 +74,13 @@ const loginStyles = makeStyles((theme) => ({
     width: '75%',
     margin: 'auto',
   },
-  input: {
+  inputField: {
     marginBottom: '15px',
     width: '100%',
-  },  
+  },
+  input: {
+    color: '#03DAC5'
+  },
   button: {
     marginBottom: '15px',
   },
@@ -68,7 +90,7 @@ const loginStyles = makeStyles((theme) => ({
     width: '75%',
     height: '35%',
     margin: 'auto',
-  }
-}))
+  },
+})
 
 export default Login
