@@ -98,6 +98,7 @@ const loginStyle = makeStyles({
   },
   button: {
     marginBottom: '15px',
+    fontWeight: 'bold',
   },
   buttonGroup: {
     display: 'flex',
