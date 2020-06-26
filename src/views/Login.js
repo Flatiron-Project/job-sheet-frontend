@@ -1,10 +1,10 @@
 /* eslint-disable */
 import React from 'react'
 import { makeStyles, TextField, Button } from '@material-ui/core'
-import { theme } from '../styles/theme'
+// import { theme } from '../styles/theme'
 
 const Login = () => {
-  const classes = loginStyles()
+  const classes = loginStyle()
 
   return (
     <div className={classes.view}>
@@ -15,24 +15,36 @@ const Login = () => {
           id='email-input'
           label='Email'
           variant='outlined'
+          color='primary'
         />
         <TextField
           className={classes.input}
           id='password-input'
           label='Password'
           variant='outlined'
+          color='primary'
         />
       </form>
       <div className={classes.buttonGroup}>
-        <Button className={classes.button} variant="contained" color="primary">LOGIN</Button>
-        <Button className={classes.button} variant="contained" color="primary">SIGN UP</Button>
-        <Button className={classes.button} variant="contained" color="secondary">Log in with Google</Button>
+        <Button className={classes.button} variant='contained' color='primary'>
+          LOGIN
+        </Button>
+        <Button className={classes.button} variant='contained' color='primary'>
+          SIGN UP
+        </Button>
+        <Button
+          className={classes.button}
+          variant='contained'
+          color='secondary'
+        >
+          Log in with Google
+        </Button>
       </div>
     </div>
   )
 }
 
-const loginStyles = makeStyles((theme) => ({
+const loginStyle = makeStyles({
   view: {
     display: 'flex',
     flexDirection: 'column',
@@ -59,7 +71,7 @@ const loginStyles = makeStyles((theme) => ({
   input: {
     marginBottom: '15px',
     width: '100%',
-  },  
+  },
   button: {
     marginBottom: '15px',
   },
@@ -69,7 +81,7 @@ const loginStyles = makeStyles((theme) => ({
     width: '75%',
     height: '35%',
     margin: 'auto',
-  }
-}))
+  },
+})
 
 export default Login
