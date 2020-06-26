@@ -8,7 +8,7 @@ import {
   Button,
   Typography,
 } from "@material-ui/core"
-// import { companyData } from "../data/companyData.js"
+import { withRouter } from "react-router-dom"
 
 const useStyles = makeStyles({
   root: {
@@ -19,8 +19,12 @@ const useStyles = makeStyles({
     fontSize: 20,
   },
   img: {
-    width: 50,
-    height: 50,
+    width: 100,
+    height: 100,
+    margin: 2,
+  },
+  price: {
+    // color: 'red'
   },
 })
 
@@ -28,19 +32,27 @@ const GigCard = (props) => {
   // TODO Turn into card w/ material UI
   const classes = useStyles()
 
-  const { id, name, imgSrc, payment } = props
-  const placeholder = `https://via.placeholder.com/100/0000FF/808080`
+  const { id, name, imgSrc, price } = props.gigProps
+  // const placeholder = `https://via.placeholder.com/100/0000FF/808080`
+
+  const handleGigClick = (e) => {
+    // TODO go to gig ticket url for this gigID
+    // /gig-ticket/:id
+    console.log(e, props)
+  }
 
   console.log("gig card", props)
   return (
-    <Card className={classes.root} raised={true}>
-      {/* <CardContent> */}
-      {/* <CardMedia src={placeholder} /> */}
-      <h3>{name}</h3>
-      <img src={imgSrc} />
-      <h4>{payment}</h4>
+    <Card className={classes.root} raised={true} onClick={handleGigClick}>
+      <CardContent>
+        {/* <CardMedia src={imgSrc}  /> */}
+        <img src={imgSrc} className={classes.img} />
+        <Typography className={classes.cardHeader} className={classes.price}>
+          ~${price}
+        </Typography>
+      </CardContent>
     </Card>
   )
 }
 
-export default GigCard
+export default withRouter(GigCard)

@@ -3,13 +3,19 @@ import React, { useState } from "react"
 import { makeStyles, Grid } from "@material-ui/core"
 import GigCard from "./GigCard"
 import { theme } from "../styles/theme"
+import wagSrc from '../assets/Wag.png'
+import taskSrc from '../assets/taskrabbit.png'
+import instaSrc from '../assets/instacart.png'
+import lyftSrc from '../assets/lyft.png'
 
 const gigCardContainerStyle = makeStyles((theme) => ({
   header: {
     fontWeight: "bold",
 
   },
-  container: {},
+  container: {
+    padding:  20
+  },
 }))
 
 const companyData = [
@@ -50,9 +56,8 @@ const GigCardContainer = (props) => {
 
   const classes = gigCardContainerStyle()
 
-  console.log(renderAllGigCards)
   return (
-    <div className={classes.header}>
+    <div className={classes.container}>
       <h2>Today's Gigs!</h2>
       <Grid container={true} align-items='left' align-content="center">
         {renderAllGigCards}
