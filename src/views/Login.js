@@ -1,47 +1,71 @@
 /* eslint-disable */
-import React from 'react'
+import React, { useState } from 'react'
 import { makeStyles, TextField, Button } from '@material-ui/core'
-// import { theme } from '../styles/theme'
 
 const Login = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const classes = loginStyle()
+
+  const handleLogin = () => {
+    console.log(`Email: ${email}`)
+    console.log(`Password: ${password}`)
+  }
+
+  const handleSignup = () => {
+    console.log(`Redirect to Sign Up Page`)
+  }
 
   return (
     <div className={classes.view}>
       <h1 className={classes.title}>ORBIT</h1>
       <form className={classes.form}>
         <TextField
+          value={email}
           className={classes.inputField}
           id='email-input'
           label='Email'
           variant='outlined'
           color='primary'
           InputProps={{
-            className: classes.input
+            className: classes.input,
           }}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <TextField
+          value={password}
           className={classes.inputField}
+          type='password'
           id='password-input'
           label='Password'
           variant='outlined'
           color='primary'
           InputProps={{
-            className: classes.input
+            className: classes.input,
           }}
+          onChange={(e) => setPassword(e.target.value)}
         />
       </form>
       <div className={classes.buttonGroup}>
-        <Button className={classes.button} variant='contained' color='primary'>
+        <Button
+          className={classes.button}
+          variant='contained'
+          color='primary'
+          onClick={handleLogin}
+        >
           LOGIN
-        </Button>
-        <Button className={classes.button} variant='contained' color='primary'>
-          SIGN UP
         </Button>
         <Button
           className={classes.button}
           variant='contained'
-          color='secondary'
+          color='primary'
+          onClick={handleSignup}
+        >
+          SIGN UP
+        </Button>
+        <Button
+          className={classes.googleButton}
+          variant='contained'
         >
           Log in with Google
         </Button>
@@ -56,19 +80,15 @@ const loginStyle = makeStyles({
     flexDirection: 'column',
     width: '375px',
     height: '812px',
-    background:
-      'radial-gradient(142.03% 78.35% at 43.72% 78.35%, #03DAC5 0%, #541FE8 5.36%, #3F51DF 13.71%, #1AA4CF 16.09%, #6200EE 16.64%, #3C56DE 26%, #6200EE 28.43%, #03DAC5 30.18%, #6004ED 33.73%, #541FE8 38.5%, #5127E7 54.66%, #414BE0 61.22%, #571AE9 62.87%, #5224E7 67.23%, #03DAC5 80.97%, #483BE3 85.3%, #5E0AEC 88.21%, #541FE8 88.51%, #541FE8 92.94%, #541FE8 100%)',
+    background: 'linear-gradient(0.4deg, #6200EE 3.88%, #03DAC5 105.33%)',
   },
   title: {
     marginTop: '25%',
-    fontFamily: 'Antic Slab',
-    fontStyle: 'normal',
     fontWeight: 'normal',
-    fontSize: '36px',
+    fontSize: '48px',
     lineHeight: '24px',
-    /* or 67% */
-    letterSpacing: '0.15px',
-    color: '#000000',
+    letterSpacing: '15px',
+    color: '#7F39FB',
   },
   form: {
     width: '75%',
@@ -79,10 +99,16 @@ const loginStyle = makeStyles({
     width: '100%',
   },
   input: {
-    color: '#03DAC5'
+    color: '#03DAC5',
   },
   button: {
     marginBottom: '15px',
+    fontWeight: 'bold',
+  },
+  googleButton: {
+    marginBottom: '15px',
+    fontWeight: 'bold',
+    backgroundcolor: 'white',
   },
   buttonGroup: {
     display: 'flex',
