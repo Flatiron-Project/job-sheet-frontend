@@ -11,18 +11,24 @@ const Login = () => {
       <h1 className={classes.title}>ORBIT</h1>
       <form className={classes.form}>
         <TextField
-          className={classes.input}
+          className={classes.inputField}
           id='email-input'
           label='Email'
           variant='outlined'
           color='primary'
+          InputProps={{
+            className: classes.input
+          }}
         />
         <TextField
-          className={classes.input}
+          className={classes.inputField}
           id='password-input'
           label='Password'
           variant='outlined'
           color='primary'
+          InputProps={{
+            className: classes.input
+          }}
         />
       </form>
       <div className={classes.buttonGroup}>
@@ -68,9 +74,12 @@ const loginStyle = makeStyles({
     width: '75%',
     margin: 'auto',
   },
-  input: {
+  inputField: {
     marginBottom: '15px',
     width: '100%',
+  },
+  input: {
+    color: '#03DAC5'
   },
   button: {
     marginBottom: '15px',
