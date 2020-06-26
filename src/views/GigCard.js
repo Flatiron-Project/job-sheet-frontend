@@ -32,7 +32,7 @@ const GigCard = (props) => {
   // TODO Turn into card w/ material UI
   const classes = useStyles()
 
-  const { id, name, imgSrc, price } = props.gigProps
+  const { id, name, imgSrc, payment } = props
   // const placeholder = `https://via.placeholder.com/100/0000FF/808080`
 
   const handleGigClick = (e) => {
@@ -48,7 +48,7 @@ const GigCard = (props) => {
         {/* <CardMedia src={imgSrc}  /> */}
         <img src={imgSrc} className={classes.img} />
         <Typography className={classes.cardHeader} className={classes.price}>
-          ~${price}
+          {payment}
         </Typography>
       </CardContent>
     </Card>

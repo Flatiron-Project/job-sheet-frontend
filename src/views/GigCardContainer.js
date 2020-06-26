@@ -3,10 +3,6 @@ import React, { useState } from "react"
 import { makeStyles, Grid } from "@material-ui/core"
 import GigCard from "./GigCard"
 import { theme } from "../styles/theme"
-import wagSrc from '../assets/Wag.png'
-import taskSrc from '../assets/taskrabbit.png'
-import instaSrc from '../assets/instacart.png'
-import lyftSrc from '../assets/lyft.png'
 
 const gigCardContainerStyle = makeStyles((theme) => ({
   header: {
