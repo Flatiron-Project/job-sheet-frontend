@@ -53,8 +53,8 @@ const GigCardContainer = (props) => {
   console.log(renderAllGigCards)
   return (
     <div className={classes.header}>
-      <h2>Todays Gigs!</h2>
-      <Grid container={true} align-items='center'>
+      <h2>Today's Gigs!</h2>
+      <Grid container={true} align-items='left' align-content="center">
         {renderAllGigCards}
         <GigCard
           id={companyData[0].id}
