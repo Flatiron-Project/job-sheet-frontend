@@ -105,11 +105,6 @@ const loginStyle = makeStyles({
     marginBottom: '15px',
     fontWeight: 'bold',
   },
-  googleButton: {
-    marginBottom: '15px',
-    fontWeight: 'bold',
-    backgroundcolor: 'white',
-  },
   buttonGroup: {
     display: 'flex',
     flexDirection: 'column',
